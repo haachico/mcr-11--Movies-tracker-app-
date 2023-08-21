@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:wght@400;700&family=Poppins:wght@100;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap");
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+.App {
+  font-family: "Poppins";
+  text-align: center;
+}
+/* .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  margin: 0px 10px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.movie--card {
+  width: 18rem;
+  height: 100%;
+  text-align: left;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 5px;
+  position: relative;
+  background-color: #d4d4d8;
+  color: black;
+  border-radius: 5px;
+}
+.movie--card p {
+  margin-bottom: 2rem;
+}
+
+.watch--icon {
+  position: absolute;
+  left: 0;
+  background-color: white;
+  padding: 2px 5px;
+  box-shadow: 0 0 5px #ccc;
+  color: black;
+  border-radius: 5px 0px 5px 0px;
+}
+
+.star--icon {
+  position: absolute;
+  right: 0;
+  background-color: white;
+
+  padding: 2px 5px;
+  box-shadow: 0 0 5px #ccc;
+  color: black;
+  border-radius: 0px 5px 0px 5px;
+}
+
+.delete--icon {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+
+  padding: 2px 5px;
+  box-shadow: 0 0 5px #ccc;
+  color: black;
+  border-radius: 0px 5px 0px 5px;
+}
+
+.edit--icon {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+
+  padding: 2px 5px;
+  box-shadow: 0 0 5px #ccc;
+  color: black;
+  border-radius: 5px 0px 5px 0px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.movie--card h3,
+p {
+  margin: 10px 10px;
+  color: black;
+}
+
+.movie--card p {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.movie--card img {
+  width: 100%;
+  height: 12rem;
+  border-radius: 5px 5px 0 0;
+  /* object-fit: cover; */
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+}
+.movie--modal {
+  display: flex;
+  background-color: red;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  text-align: left;
+  color: black;
+}
+
+/* Styles for labels */
+.movie--modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styles for inputs */
+.movie--modal input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select {
+  background-color: #d4d4d8;
+  width: 8rem;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+select:focus {
+  background-color: white;
+}
+
+.search--input {
+  width: 25rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #d4d4d8;
+  transition: background-color 0.3s;
+}
+
+.search--input:focus {
+  background-color: white;
+}
+
+/* Styles for the add button */
+.add--btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 8rem;
+}
+
+.movie--modal button:hover {
+  background-color: #0056b3;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details--div {
+  margin-top: 2rem;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  width: 70%;
+  background-color: #d4d4d8;
+  color: black;
+}
+
+.details--div img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.starred--div,
+.watchlist--div {
+  margin-top: 5rem;
+}
